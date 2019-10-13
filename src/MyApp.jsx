@@ -2,7 +2,9 @@ import React from 'react'
 import AppTitle from './AppTitle'
 const generateArray = (n) =>(Array.from(Array(n),(v,k)=>k+1));
 const generateRandomArray = (n) =>(Array.from(Array(n), () => Math.ceil(Math.random() * 25)));
-const arrayEx4 =  [2, 56, 23, 88, 17, 4];
+const arrayEx4 = [2, 56, 23, 88, 17, 4];
+const arrayEx5 = [2, 5, 8, 10];
+const squareRoot = (arr) => (arr.map(x=>Math.sqrt(x)));
 const App = () => (
   <body>
   <h1>Minimal React jiangg</h1>  
@@ -10,6 +12,9 @@ const App = () => (
   <AppTitle/> 
   <p>Display numbers bigger than 15 from [2, 56, 23, 88, 17, 4]:</p>
   {arrayEx4.filter(element=>element>15).toString()}
+  <p>Display square root of [2, 5, 8, 10]:</p>
+  {squareRoot(arrayEx5).toString()}
+
  </body>
 )
 
