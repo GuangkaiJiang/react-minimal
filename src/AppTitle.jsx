@@ -1,10 +1,9 @@
 import React from 'react'
 
-const App2 = () => (
-  <h1>This is another file.If you see this, means it works.
+class AppTitle extends React.Component {
+  render(){
+    return <h1>This is AppTitle!</h1>;
+  }
+}
 
-  </h1>  
-  
-)
-
-export default App2
+export default AppTitle
