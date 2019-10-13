@@ -1,6 +1,8 @@
 import React from 'react'
 import AppTitle from './AppTitle'
 const generateArray = (n) =>(Array.from(Array(n),(v,k)=>k+1));
+const generateRandomArray = (n) =>(Array.from(Array(n), () => Math.ceil(Math.random() * 25)));
+
 const App = () => (
   <body>
   <h1>Minimal React jiangg</h1>  
