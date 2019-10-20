@@ -1,5 +1,5 @@
 import React from 'react'
-const generateArrayLab2 = (a,b) =>(Array.from(Array(b-a+1),(v,k)=>+k+Number(a)));
+const generateArrayLab2 = (a,b) =>(Array.from(Array(b-a+1),(v,k)=>k+Number(a)));
 class Lab2 extends React.Component{
     constructor(props){
         super(props);
@@ -29,7 +29,7 @@ class Lab2 extends React.Component{
             <>
            <input type="number" onChange={this.aFieldValueChangeHandeler}/>
            <input type="number" onChange={this.bFieldValueChangeHandeler}/>
-           {(this.state.a>0&&this.state.a<this.state.b)?<p>{generateArrayLab2(this.state.a,this.state.b).toString()}</p>:<p></p>}
+           {(Number(this.state.a)>0&&(Number(this.state.a)<Number(this.state.b)))?<p>{generateArrayLab2(this.state.a,this.state.b).toString()}</p>:<p></p>}
            </>
         )
     }
